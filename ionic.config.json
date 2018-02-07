@@ -1,0 +1,8 @@
+{
+  "name": "Pegaae",
+  "app_id": "3cc26e92",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
