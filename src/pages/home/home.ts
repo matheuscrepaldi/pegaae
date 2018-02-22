@@ -1,17 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+/**
+ * Generated class for the HomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
 
-  constructor(public navCtrl: NavController, public splashScreen: SplashScreen) {
-
-    this.splashScreen.hide();
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
   }
 
 }
