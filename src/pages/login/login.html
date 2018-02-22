@@ -1,0 +1,50 @@
+
+<ion-content padding>
+  <div id="container">
+<ion-row>
+  <ion-col text-center>
+    <img src="assets/imgs/logo_login.png" width="300">
+  </ion-col>
+</ion-row>
+<div class="spacer" style="height:100px;" id="page-spacer1"></div>
+  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item id="borda">
+            <ion-input placeholder="Usuário" name="username" id="loginField"
+                       type="text" required [(ngModel)]="user.email" #email></ion-input>
+          </ion-item>
+          <div class="spacer" style="height:20px;" id="page-spacer1"></div>
+          <ion-item id="borda">
+            <ion-input placeholder="Senha" name="password" id="passwordField"
+                       type="password" required [(ngModel)]="user.password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    
+
+  </form>
+  <ion-row>
+    <ion-col>
+      
+      <button ion-button block class="submit-btn" full (click)="login(user)" style="border-radius:5px 5px 5px 5px;" color="primary">Login</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col>
+        
+        <p style="text-align:center;"><a href="#">Esqueceu sua senha?</a></p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        
+        <p style="text-align:center;"><a target="_blank" (click)="register()">Não tem uma conta? <strong>Cadastre-se!</strong></a></p>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
