@@ -7,25 +7,27 @@
   </ion-col>
 </ion-row>
 <div class="spacer" style="height:100px;" id="page-spacer1"></div>
-  <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+ 
     <ion-row>
       <ion-col>
         <ion-list inset>
-          <ion-item id="borda">
-            <ion-input placeholder="Usuário" name="username" id="loginField"
-                       type="text" required [(ngModel)]="user.email" #email></ion-input>
+          <ion-item>
+              <ion-label color="primary" floating>Usuário</ion-label>
+            <ion-input placeholder="" name="username" id="loginField"
+                       type="text"  [(ngModel)]="user.email" #email></ion-input>
           </ion-item>
-          <div class="spacer" style="height:20px;" id="page-spacer1"></div>
-          <ion-item id="borda">
-            <ion-input placeholder="Senha" name="password" id="passwordField"
-                       type="password" required [(ngModel)]="user.password"></ion-input>
+        
+          <ion-item >
+              <ion-label color="primary" floating>Senha</ion-label>
+            <ion-input placeholder="" name="password" id="passwordField"
+                       type="password"  [(ngModel)]="user.password"></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
     </ion-row>
     
 
-  </form>
+
   <ion-row>
     <ion-col>
       
@@ -37,14 +39,9 @@
       <ion-col>
         
         <p style="text-align:center;"><a href="#">Esqueceu sua senha?</a></p>
+        <p style="text-align:center;"><a style="cursor:pointer;" (click)="register()">Não tem uma conta? <strong>Cadastre-se!</strong></a></p>
       </ion-col>
     </ion-row>
 
-    <ion-row>
-      <ion-col>
-        
-        <p style="text-align:center;"><a target="_blank" (click)="register()">Não tem uma conta? <strong>Cadastre-se!</strong></a></p>
-      </ion-col>
-    </ion-row>
   </div>
 </ion-content>
